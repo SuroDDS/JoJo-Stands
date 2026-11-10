@@ -49,6 +49,34 @@ RimWorld measures world placement in cells. All following scale values are **ini
 - Owner usually remains readable in front. Stand anchors are **per-direction**, not a single hardcoded `x += 0.5`.
 - Draw depth / occlusion / elevation must be checked at all four rotations. Never hide owner hands/weapon unnecessarily.
 
+## 2a. Mandatory visual size class (v0.2.3 decision)
+
+**Stand size is part of the Stand identity, not an arbitrary global renderer constant.** The current Star Platinum 1.10-world-unit presentation was too small in an actual RimWorld screenshot: its torso appeared close to a decorative shoulder pet.
+
+Choose a size class for **every planned Stand** before producing sprites. For companion types compare the visible silhouette to the vanilla adult humanlike pawn at the same zoom and camera direction, rather than to PNG canvas dimensions (transparent padding distorts such comparisons).
+
+| Size class | Intended visual presence | Examples | Initial world-space width guideline |
+| --- | --- | --- | --- |
+| `Tiny` | A small recognizable piece or swarm unit | Sex Pistols, individual Harvest | 0.2–0.45 cell |
+| `Compact` | Light humanoid / small floating figure | Echoes ACT1, Tusk ACT1 | 0.55–0.85 cell |
+| `Standard` | Noticeably present humanlike Stand | Killer Queen, Sticky Fingers | 0.90–1.25 cells |
+| `Heavy` | Broad upper-body silhouette; visually dominant | Star Platinum, The World, Crazy Diamond | 1.25–1.65 cells |
+| `Huge` | Deliberately oversized or environment-scale | Special manifestations, large world-bound forms | Per-object or per-area, not one global scale |
+| `Bound` | Physical object's real proportions | Anubis, Super Fly, Wheel of Fortune | Follow Thing/vehicle size |
+
+These are **starting footprints, not final game-engine DrawScale guarantees**. Actual visible size depends on transparent padding, UV selection, camera and asset content. A `Heavy` label must be validated in screenshots before approval.
+
+Every visual profile records:
+- `sizeClass`: one category above.
+- `visualScale`: world-space render multiplier tuned *with the actual texture*.
+- `ownerBodyScaleFactor`: multiplier (default 1.0) only if owner size should change visual scale. Most Stands should **not** auto-grow with owner body size.
+- `visualDominance`: `Low`, `Medium`, `High` (how strongly the Stand silhouette competes with the owner; not a combat statistic).
+- `offsetNorth/East/South/West`: per-facing positions rechecked whenever scale or sprite changes.
+
+**Star Platinum calibration:** initial Heavy target `visualScale=1.55`, four rear-side offsets adjusted from the previous 1.10 configuration. Confirm against a normal adult pawn at 1x and 3x camera zoom; ensure the torso/arms remain prominent but don't hide the owner's head or action feedback.
+
+**Asset approval gate:** for each Stand capture a size comparison screenshot beside a vanilla colonist, and a separate combat screenshot. If a Stand's perceived size is wrong, adjust sprite fill/crop, world scale and offsets together—not just the nominal scale number.
+
 ## 3. Art archetypes
 
 Archetypes are **visual rendering groups**, not a Stand's combat class. One Stand may use several primitives.
