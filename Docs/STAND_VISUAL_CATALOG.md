@@ -1,6 +1,6 @@
 # STAND_VISUAL_CATALOG — planning registry
 
-> **Catalog v1.0 — design inventory, not implemented assets.** JoJo contains far more named Stands than can responsibly be drawn at once. This document covers the **first 85 prioritized canonical Stand identities** spanning Parts 3–8, plus named Act/Requiem forms as profile variants. It is deliberately a staged catalog, **not a claim that every canonical Stand is listed**. New Stand entries MUST follow the same schema and art rules.
+> **Catalog v1.0 — design inventory, not implemented assets.** JoJo contains far more named Stands than can responsibly be drawn at once. This document covers the **first 96 prioritized Stand visual profiles** spanning Parts 3–8, plus named Act/Requiem forms as profile variants. It is deliberately a staged catalog, **not a claim that every canonical Stand is listed**. New Stand entries MUST follow the same schema and art rules.
 >
 > Gameplay status: currently only `JJ_StarPlatinum` exists as a playable StandDef; its v0.2.0 sprite is a temporary placeholder. **All other rows are planned visual designs, not working mechanics or available sprites.**
 
@@ -167,7 +167,7 @@ These define the reusable rendering archetypes before broad expansion.
 | Walking Heart | V; OV; body | magenta / deep violet / pale pink | heel-spike cue | COND |
 | California King Bed | Y; C; target | yellow / cream / cobalt | chess-like / memory tile cue | SU |
 
-**Inventory count:** 16 priority A + 18 Part 3 + 14 Part 4 + 14 Part 5 + 11 Part 6 + 11 Part 7 + 8 Part 8 = **92 entries** (individual Act/Requiem visual forms count as entries). This is an intended coverage set, not an authoritative canon index.
+**Inventory count:** 16 priority A + 21 Part 3 + 15 Part 4 + 14 Part 5 + 11 Part 6 + 11 Part 7 + 8 Part 8 = **96 entries** (individual Act/Requiem visual forms count as entries). This is an intended coverage set, not an authoritative canon index.
 
 ## 9. Cross-cutting per-Stand exceptions and approvals
 
