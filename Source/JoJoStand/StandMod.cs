@@ -12,6 +12,7 @@ namespace JoJoStand
         public bool naturalAwakening = true;
         public bool lethalArrowFailure = true;
         public bool combatDebug = false;
+        public bool showStandVisuals = true;
         public float npcChance = 0.03f;
         public float animalChance = 0.005f;
         public float arrowWorthyChance = 0.55f;
@@ -25,6 +26,7 @@ namespace JoJoStand
             Scribe_Values.Look(ref naturalAwakening, "naturalAwakening", true);
             Scribe_Values.Look(ref lethalArrowFailure, "lethalArrowFailure", true);
             Scribe_Values.Look(ref combatDebug, "combatDebug", false);
+            Scribe_Values.Look(ref showStandVisuals, "showStandVisuals", true);
             Scribe_Values.Look(ref npcChance, "npcChance", 0.03f);
             Scribe_Values.Look(ref animalChance, "animalChance", 0.005f);
             Scribe_Values.Look(ref arrowWorthyChance, "arrowWorthyChance", 0.55f);
@@ -52,6 +54,7 @@ namespace JoJoStand
             list.CheckboxLabeled("JJ_NaturalAwakening".Translate(), ref Config.naturalAwakening);
             list.CheckboxLabeled("JJ_LethalArrow".Translate(), ref Config.lethalArrowFailure);
             list.CheckboxLabeled("JJ_CombatDebug".Translate(), ref Config.combatDebug);
+            list.CheckboxLabeled("JJ_ShowStandVisuals".Translate(), ref Config.showStandVisuals);
             list.GapLine();
             list.Label("JJ_NpcChance".Translate(Config.npcChance.ToStringPercent()));
             Config.npcChance = list.Slider(Config.npcChance, 0f, 0.20f);
