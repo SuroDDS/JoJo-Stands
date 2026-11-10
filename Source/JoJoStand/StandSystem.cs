@@ -131,6 +131,7 @@ namespace JoJoStand
             Hediff_StandBond bond = GetBond(owner);
             StandDef stand = bond.Stand;
             bond.NextPunchTick = Find.TickManager.TicksGame + stand.punchCooldownTicks;
+            bond.LastVisualPunchTick = Find.TickManager.TicksGame;
             target.TakeDamage(new DamageInfo(DamageDefOf.Blunt, stand.punchDamage,
                 0f, -1f, owner));
 
