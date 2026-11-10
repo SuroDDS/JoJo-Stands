@@ -21,4 +21,6 @@
   <JJ_PunchDesc>Choose a nearby target for the Stand's short-range blunt attack.</JJ_PunchDesc>
   <JJ_PunchInvalid>Invalid target, out of range, blocked line of sight or ability on cooldown.</JJ_PunchInvalid>
   <JJ_OnCooldown>Stand Punch is recharging.</JJ_OnCooldown>
+  <JJ_CombatDebug>Stand combat debug (notifications and log)</JJ_CombatDebug>
+  <JJ_DebugHit>{1} hits {2} with {0} (base damage: {3})</JJ_DebugHit>
 </LanguageData>

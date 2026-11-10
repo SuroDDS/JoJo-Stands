@@ -11,6 +11,7 @@ namespace JoJoStand
         public bool inheritPotential = true;
         public bool naturalAwakening = true;
         public bool lethalArrowFailure = true;
+        public bool combatDebug = false;
         public float npcChance = 0.03f;
         public float animalChance = 0.005f;
         public float arrowWorthyChance = 0.55f;
@@ -23,6 +24,7 @@ namespace JoJoStand
             Scribe_Values.Look(ref inheritPotential, "inheritPotential", true);
             Scribe_Values.Look(ref naturalAwakening, "naturalAwakening", true);
             Scribe_Values.Look(ref lethalArrowFailure, "lethalArrowFailure", true);
+            Scribe_Values.Look(ref combatDebug, "combatDebug", false);
             Scribe_Values.Look(ref npcChance, "npcChance", 0.03f);
             Scribe_Values.Look(ref animalChance, "animalChance", 0.005f);
             Scribe_Values.Look(ref arrowWorthyChance, "arrowWorthyChance", 0.55f);
@@ -49,6 +51,7 @@ namespace JoJoStand
             list.CheckboxLabeled("JJ_InheritPotential".Translate(), ref Config.inheritPotential);
             list.CheckboxLabeled("JJ_NaturalAwakening".Translate(), ref Config.naturalAwakening);
             list.CheckboxLabeled("JJ_LethalArrow".Translate(), ref Config.lethalArrowFailure);
+            list.CheckboxLabeled("JJ_CombatDebug".Translate(), ref Config.combatDebug);
             list.GapLine();
             list.Label("JJ_NpcChance".Translate(Config.npcChance.ToStringPercent()));
             Config.npcChance = list.Slider(Config.npcChance, 0f, 0.20f);

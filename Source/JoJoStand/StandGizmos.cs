@@ -65,7 +65,7 @@ namespace JoJoStand
                     };
                     Find.Targeter.BeginTargeting(parameters, (LocalTargetInfo target) =>
                     {
-                        if (!StandSystem.Punch(pawn, target.Thing))
+                        if (!StandSystem.Punch(pawn, target.Thing, true))
                             Messages.Message("JJ_PunchInvalid".Translate(),
                                 MessageTypeDefOf.RejectInput);
                     });

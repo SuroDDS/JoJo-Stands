@@ -21,4 +21,6 @@
   <JJ_PunchDesc>Выберите ближайшую цель для короткой ударной атаки стенда.</JJ_PunchDesc>
   <JJ_PunchInvalid>Недопустимая цель, слишком далеко, нет прямой видимости или способность восстанавливается.</JJ_PunchInvalid>
   <JJ_OnCooldown>Удар стенда перезаряжается.</JJ_OnCooldown>
+  <JJ_CombatDebug>Отладка боевых действий стендов (сообщения и лог)</JJ_CombatDebug>
+  <JJ_DebugHit>{1} атакует цель {2} стендом {0} (базовый урон: {3})</JJ_DebugHit>
 </LanguageData>

@@ -87,25 +87,56 @@ namespace JoJoStand
             return HasStand(observer);
         }
 
-        public static bool CanPunch(Pawn owner, Thing target)
+        /// <summary>
+        /// Returns an explicit failure code without changing the attack's existing rules.
+        /// </summary>
+        private static string PunchFailure(Pawn owner, Thing target)
         {
+            if (owner == null || owner.Dead || !owner.Spawned)
+                return "owner_unavailable";
+
             Hediff_StandBond bond = GetBond(owner);
-            if (bond == null || !bond.Awakened || !bond.Manifested || bond.Stand == null ||
-                bond.Stand.kind != StandKind.Manifested || owner == null || owner.Dead ||
-                !owner.Spawned || target == null || !target.Spawned || target.Map != owner.Map ||
-                target == owner || Find.TickManager == null) return false;
-            if (Find.TickManager.TicksGame < bond.NextPunchTick) return false;
-            if (owner.Position.DistanceTo(target.Position) > bond.Stand.attackRange) return false;
-            return GenSight.LineOfSight(owner.Position, target.Position, owner.Map);
+            if (bond == null || !bond.Awakened || bond.Stand == null ||
+                bond.Stand.kind != StandKind.Manifested)
+                return "stand_unavailable";
+            if (!bond.Manifested)
+                return "stand_recalled";
+            if (target == null || !target.Spawned || target.Map != owner.Map || target == owner)
+                return "invalid_target";
+            if (Find.TickManager == null)
+                return "tick_manager_missing";
+            if (Find.TickManager.TicksGame < bond.NextPunchTick)
+                return "cooldown";
+            if (owner.Position.DistanceTo(target.Position) > bond.Stand.attackRange)
+                return "out_of_range";
+            if (!GenSight.LineOfSight(owner.Position, target.Position, owner.Map))
+                return "no_line_of_sight";
+            return null;
         }
 
-        public static bool Punch(Pawn owner, Thing target)
+        public static bool CanPunch(Pawn owner, Thing target)
         {
-            if (!CanPunch(owner, target)) return false;
+            return PunchFailure(owner, target) == null;
+        }
+
+        public static bool Punch(Pawn owner, Thing target, bool manual = false)
+        {
+            string failure = PunchFailure(owner, target);
+            if (failure != null)
+            {
+                StandCombatDebug.Rejected(owner, target, failure, manual);
+                return false;
+            }
+
             Hediff_StandBond bond = GetBond(owner);
-            bond.NextPunchTick = Find.TickManager.TicksGame + bond.Stand.punchCooldownTicks;
-            target.TakeDamage(new DamageInfo(DamageDefOf.Blunt, bond.Stand.punchDamage,
+            StandDef stand = bond.Stand;
+            bond.NextPunchTick = Find.TickManager.TicksGame + stand.punchCooldownTicks;
+            target.TakeDamage(new DamageInfo(DamageDefOf.Blunt, stand.punchDamage,
                 0f, -1f, owner));
+
+            // This notification identifies the Stand responsible for the attack.
+            // The underlying injury still uses vanilla Blunt damage and its normal instigator.
+            StandCombatDebug.Hit(owner, target, stand);
             return true;
         }
 
