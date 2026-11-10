@@ -13,7 +13,9 @@ namespace JoJoStand
     {
         private const int RefreshIntervalTicks = 60;
         private const int AttackAnimationTicks = 18;
-        private const float DrawScale = 1.10f;
+        // Heavy humanoid reference size. World-space width/depth, tuned from 1.10f.
+        // This affects rendering only, never attack range or hitboxes.
+        private const float DrawScale = 1.55f;
         private const string AtlasPath = "Stands/JJ_StarPlatinum/StarPlatinumAtlas";
 
         private readonly List<Pawn> owners = new List<Pawn>();
@@ -67,10 +69,10 @@ namespace JoJoStand
                 // The pawn's draw position/rotation are read each frame, so it follows movement.
                 switch (column)
                 {
-                    case 0: drawPos.x += 0.47f; drawPos.z += 0.24f; break;
-                    case 1: drawPos.x -= 0.35f; drawPos.z += 0.32f; break;
-                    case 2: drawPos.x -= 0.47f; drawPos.z += 0.21f; break;
-                    default: drawPos.x += 0.35f; drawPos.z += 0.32f; break;
+                    case 0: drawPos.x += 0.63f; drawPos.z += 0.31f; break;
+                    case 1: drawPos.x -= 0.49f; drawPos.z += 0.41f; break;
+                    case 2: drawPos.x -= 0.63f; drawPos.z += 0.28f; break;
+                    default: drawPos.x += 0.49f; drawPos.z += 0.41f; break;
                 }
 
                 // Small idle hover, deterministic per owner; no gameplay displacement.
