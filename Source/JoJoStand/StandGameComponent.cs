@@ -103,7 +103,9 @@ namespace JoJoStand
                     if (user.Dead || user.Faction == null || user.Faction == Faction.OfPlayer ||
                         user.Downed || !StandSystem.HasStand(user)) continue;
                     Hediff_StandBond bond = StandSystem.GetBond(user);
-                    if (bond.Stand.kind != StandKind.Manifested) continue;
+                    if (bond == null || bond.Stand == null || bond.Stand.kind != StandKind.Manifested) continue;
+                    // Avoid scanning targets while the current Stand attack is on cooldown.
+                    if (Find.TickManager.TicksGame < bond.NextPunchTick) continue;
                     foreach (Pawn target in pawns)
                     {
                         if (target == user || target.Dead || !target.Spawned ||
