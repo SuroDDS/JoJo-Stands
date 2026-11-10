@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>JJ_StandBond</defName>
+    <label>stand potential</label>
+    <description>Holds this pawn's latent or awakened Stand. Latent potential is hidden from the health UI.</description>
+    <hediffClass>JoJoStand.Hediff_StandBond</hediffClass>
+    <isBad>false</isBad>
+    <chronic>true</chronic>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+  </HediffDef>
+</Defs>

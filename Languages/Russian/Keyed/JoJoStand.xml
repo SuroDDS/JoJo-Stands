@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <JJ_ModTitle>JoJo: стенды — прототип</JJ_ModTitle>
+  <JJ_EnableNpc>Стенды у пешек других фракций</JJ_EnableNpc>
+  <JJ_EnableAnimals>Стенды у животных</JJ_EnableAnimals>
+  <JJ_InheritPotential>Наследование потенциала (Biotech)</JJ_InheritPotential>
+  <JJ_NaturalAwakening>Естественное пробуждение стендов</JJ_NaturalAwakening>
+  <JJ_LethalArrow>Неудача со Стрелой может убить</JJ_LethalArrow>
+  <JJ_NpcChance>Шанс стенда у NPC: {0}</JJ_NpcChance>
+  <JJ_AnimalChance>Шанс стенда у животных: {0}</JJ_AnimalChance>
+  <JJ_ArrowChance>Шанс успеха Стрелы без потенциала: {0}</JJ_ArrowChance>
+  <JJ_Awakened>{0}: пробудился стенд {1}!</JJ_Awakened>
+  <JJ_ArrowRejected>Стрела отвергла {0}!</JJ_ArrowRejected>
+  <JJ_UseArrow>Использовать Стрелу</JJ_UseArrow>
+  <JJ_UseArrowDesc>Использовать Стрелу из инвентаря или соседней клетки. При неудаче возможны тяжёлые ранения и смерть. Стрела расходуется.</JJ_UseArrowDesc>
+  <JJ_NoArrow>Нужна Стрела в инвентаре или на соседней клетке.</JJ_NoArrow>
+  <JJ_Summon>Призвать стенд</JJ_Summon>
+  <JJ_Recall>Отозвать стенд</JJ_Recall>
+  <JJ_SummonDesc>Призвать или отозвать {0}. Пока это нематериальный стенд без отдельного игрового тела.</JJ_SummonDesc>
+  <JJ_Punch>Удар стенда</JJ_Punch>
+  <JJ_PunchDesc>Выберите ближайшую цель для короткой ударной атаки стенда.</JJ_PunchDesc>
+  <JJ_PunchInvalid>Недопустимая цель, слишком далеко, нет прямой видимости или способность восстанавливается.</JJ_PunchInvalid>
+  <JJ_OnCooldown>Удар стенда перезаряжается.</JJ_OnCooldown>
+</LanguageData>

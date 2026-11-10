@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>JoJoStand</AssemblyName>
+    <RootNamespace>JoJoStand</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <OutputPath>../../1.7/Assemblies/</OutputPath>
+    <RimWorldDir Condition="'$(RimWorldDir)' == ''">$(RIMWORLD_DIR)</RimWorldDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(RimWorldDir)/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>$(RimWorldDir)/UnityStubs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>$(RimWorldDir)/Waylith.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <PackageReference Include="Lib.Harmony" Version="3.0.0-rc.5" PrivateAssets="all" ExcludeAssets="runtime" />
+  </ItemGroup>
+  <Target Name="EnsureGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(RimWorldDir)/Assembly-CSharp.dll')" Text="RimWorld 1.7 game assemblies not found. Pass -p:RimWorldDir=C:/.../RimWorld (folder containing Assembly-CSharp.dll)." />
+    <Error Condition="!Exists('$(RimWorldDir)/Waylith.dll')" Text="Waylith.dll not found. Check that the selected RimWorld installation is actually version 1.7." />
+    <Error Condition="!Exists('$(RimWorldDir)/UnityStubs.dll')" Text="UnityStubs.dll not found. Check that the selected RimWorld installation is actually version 1.7." />
+  </Target>
+</Project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <JJ_ModTitle>JoJo Stand System — Prototype</JJ_ModTitle>
+  <JJ_EnableNpc>Stand users in non-player factions</JJ_EnableNpc>
+  <JJ_EnableAnimals>Allow animals to awaken Stands</JJ_EnableAnimals>
+  <JJ_InheritPotential>Inherit Stand potential (Biotech)</JJ_InheritPotential>
+  <JJ_NaturalAwakening>Enable natural awakening</JJ_NaturalAwakening>
+  <JJ_LethalArrow>Failed Arrow attempts can kill</JJ_LethalArrow>
+  <JJ_NpcChance>NPC Stand chance: {0}</JJ_NpcChance>
+  <JJ_AnimalChance>Animal Stand chance: {0}</JJ_AnimalChance>
+  <JJ_ArrowChance>Arrow success without potential: {0}</JJ_ArrowChance>
+  <JJ_Awakened>{0} awakened a Stand: {1}!</JJ_Awakened>
+  <JJ_ArrowRejected>The Stand Arrow rejected {0}!</JJ_ArrowRejected>
+  <JJ_UseArrow>Use Stand Arrow</JJ_UseArrow>
+  <JJ_UseArrowDesc>Use a Stand Arrow in this pawn's inventory or up to one tile away. Risk of serious injury or death on failure. The Arrow is consumed.</JJ_UseArrowDesc>
+  <JJ_NoArrow>Need a Stand Arrow in inventory or on an adjacent tile.</JJ_NoArrow>
+  <JJ_Summon>Manifest Stand</JJ_Summon>
+  <JJ_Recall>Recall Stand</JJ_Recall>
+  <JJ_SummonDesc>Manifest or recall {0}. The intangible Stand cannot be targeted as a separate pawn.</JJ_SummonDesc>
+  <JJ_Punch>Stand Punch</JJ_Punch>
+  <JJ_PunchDesc>Choose a nearby target for the Stand's short-range blunt attack.</JJ_PunchDesc>
+  <JJ_PunchInvalid>Invalid target, out of range, blocked line of sight or ability on cooldown.</JJ_PunchInvalid>
+  <JJ_OnCooldown>Stand Punch is recharging.</JJ_OnCooldown>
+</LanguageData>

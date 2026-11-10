@@ -1,0 +1,11 @@
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\JoJoStand.csproj.AssemblyReference.cache
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\JoJoStand.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\JoJoStand.AssemblyInfoInputs.cache
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\JoJoStand.AssemblyInfo.cs
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\JoJoStand.csproj.CoreCompileInputs.cache
+C:\Dev\JoJoStandPrototype\1.7\Assemblies\JoJoStand.dll
+C:\Dev\JoJoStandPrototype\1.7\Assemblies\JoJoStand.pdb
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\JoJoStand.dll
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\refint\JoJoStand.dll
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\JoJoStand.pdb
+C:\Dev\JoJoStandPrototype\Source\JoJoStand\obj\Release\ref\JoJoStand.dll

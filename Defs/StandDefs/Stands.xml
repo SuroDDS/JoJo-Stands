@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JoJoStand.StandDef>
+    <defName>JJ_StarPlatinum</defName>
+    <label>Star Platinum</label>
+    <description>Close-range Stand. First playable ability: a short-range punch that inflicts blunt damage. Time Stop is not implemented in the prototype.</description>
+    <kind>Manifested</kind>
+    <selectionWeight>1</selectionWeight>
+    <attackRange>2.9</attackRange>
+    <punchDamage>14</punchDamage>
+    <punchCooldownTicks>180</punchCooldownTicks>
+  </JoJoStand.StandDef>
+</Defs>

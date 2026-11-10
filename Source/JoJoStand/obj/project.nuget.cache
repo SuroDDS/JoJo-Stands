@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "afHA5tJTSIU=",
+  "success": true,
+  "projectFilePath": "C:\\Dev\\JoJoStandPrototype\\Source\\JoJoStand\\JoJoStand.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\lib.harmony\\3.0.0-rc.5\\lib.harmony.3.0.0-rc.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef>
+    <defName>JJ_StandArrow</defName>
+    <label>Stand Arrow</label>
+    <description>A mysterious artifact capable of awakening a Stand in a worthy individual. Failure may cause serious injury or death. Prototype: use it from a colonist's gizmo when adjacent to the arrow or carrying it in inventory.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <stackLimit>1</stackLimit>
+    <graphicData>
+      <texPath>Things/StandArrow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.8,0.8)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1800</MarketValue>
+      <Mass>0.3</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeability>Buyable</tradeability>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>14</pathCost>
+  </ThingDef>
+</Defs>
