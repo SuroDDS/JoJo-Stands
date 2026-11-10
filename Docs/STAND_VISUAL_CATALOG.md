@@ -34,6 +34,31 @@ Palette notation `base / shade / accent` is an art direction in natural color na
 
 All rows require 4-way artwork **when archetype = H and appearance is persistent** unless a documented exception is approved.
 
+## 1a. Mandatory size and dominance pass (v0.2.3)
+
+All future Stand profiles require `sizeClass`, `visualScale`, `ownerBodyScaleFactor`, `visualDominance` and directional offsets as described in the schema. This is a **design checklist**, not a claim the runtime already parses these values.
+
+| First-wave Stand | Size class | Visual dominance | Notes |
+| --- | --- | --- | --- |
+| **Star Platinum** | **Heavy** | **High** | Initial runtime scale 1.55; compare with pawn across all rotations |
+| The World | Heavy | High | Wide shoulder/arm silhouette, not tiny companion |
+| Crazy Diamond | Heavy | High | Armor masses make torso distinct at standard zoom |
+| Killer Queen | Standard | Medium | Slender build: height readable without being bulky |
+| Harvest (member) | Tiny | Low | Many small units, cluster footprint larger than one unit |
+| Hermit Purple | Bound / effect-dependent | Low | Tendrils sized to affected owner or target, no humanoid scale |
+| Magician's Red | Standard | Medium | Bird-head and wings need clear negative space |
+| Hierophant Green | Standard | Medium | Thin frame, long-range VFX controlled separately |
+| Silver Chariot | Standard | Medium | Lean weapon silhouette and readable sword |
+| Cheap Trick | Compact | Low | Small back-mounted attached entity |
+| Pearl Jam | Tiny | Low | Ability event visual only |
+| Sticky Fingers | Standard | Medium | Readable humanoid plus zipper cue |
+| The Hand | Heavy | High | Oversized right hand silhouette |
+| King Crimson | Heavy | High | Heavy, unmistakable shoulder mass |
+| Gold Experience | Standard | Medium | Medium humanoid / effects on target |
+| Stone Free | Standard | Medium | Compact figure with thread effects |
+
+The remaining catalog entries are **unclassified in size** until their art brief is reviewed. Do not start their asset production without filling these fields. Do not apply Star Platinum's 1.55 scaling to them automatically.
+
 ## 2. Priority A — production candidates
 
 These define the reusable rendering archetypes before broad expansion.

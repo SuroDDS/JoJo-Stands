@@ -23,6 +23,9 @@
 | `renderMode` | enum | yes | `DirectionalSprite`, `SingleSprite`, `ParticleCluster`, `Decal`, `ObjectOverlay`, `Procedural` |
 | `spriteBasePath` | string? | conditional | Path relative to `Textures`, no `.png` for directional sprites |
 | `palette` | `PaletteDef` | yes | Main, shadow, accent as hex RGB/RGBA, art direction reference |
+| `sizeClass` | enum | yes | `Tiny`, `Compact`, `Standard`, `Heavy`, `Huge`, `Bound`; art-size archetype separate from gameplay kind |
+| `visualDominance` | enum | yes | `Low`, `Medium`, `High`: silhouette prominence relative to owner, not an attack stat |
+| `ownerBodyScaleFactor` | float | optional | Default 1.0; only owner-relative visuals should change with owner body size |
 | `scale` | float | yes | World-space multiplier, default 1; checked against sprite dimensions |
 | `offsetNorth/East/South/West` | Vector2 | for owner anchor | Offset in map X/Z cells, relative to owner |
 | `altitudeLayer` | enum/string | yes | Renderer-resolved draw ordering, not arbitrary physics layer |
@@ -64,7 +67,10 @@ This is an **illustrative future XML**, not a current RimWorld Def. Do **not** p
   <anchor>OwnerRear</anchor>
   <renderMode>DirectionalSprite</renderMode>
   <spriteBasePath>Stands/JJ_StarPlatinum</spriteBasePath>
-  <scale>0.95</scale>
+  <sizeClass>Heavy</sizeClass>
+  <visualDominance>High</visualDominance>
+  <ownerBodyScaleFactor>1.0</ownerBodyScaleFactor>
+  <scale>1.55</scale>
   <offsetNorth>(-0.40,0.20)</offsetNorth>
   <offsetEast>(-0.45,0.32)</offsetEast>
   <offsetSouth>(0.42,0.30)</offsetSouth>
