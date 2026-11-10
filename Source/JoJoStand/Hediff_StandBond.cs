@@ -12,6 +12,8 @@ namespace JoJoStand
         public bool Awakened;
         public bool Manifested;
         public int NextPunchTick;
+        // Runtime visual timing only; not gameplay state and not persisted.
+        public int LastVisualPunchTick = -100000;
         public int LastAwakeningDay = -1;
 
         public override bool Visible => Awakened;

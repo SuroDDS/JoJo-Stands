@@ -23,4 +23,5 @@
   <JJ_OnCooldown>Stand Punch is recharging.</JJ_OnCooldown>
   <JJ_CombatDebug>Stand combat debug (notifications and log)</JJ_CombatDebug>
   <JJ_DebugHit>{1} hits {2} with {0} (base damage: {3})</JJ_DebugHit>
+  <JJ_ShowStandVisuals>Show Stand manifestations</JJ_ShowStandVisuals>
 </LanguageData>

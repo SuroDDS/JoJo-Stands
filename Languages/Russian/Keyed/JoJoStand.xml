@@ -23,4 +23,5 @@
   <JJ_OnCooldown>Удар стенда перезаряжается.</JJ_OnCooldown>
   <JJ_CombatDebug>Отладка боевых действий стендов (сообщения и лог)</JJ_CombatDebug>
   <JJ_DebugHit>{1} атакует цель {2} стендом {0} (базовый урон: {3})</JJ_DebugHit>
+  <JJ_ShowStandVisuals>Показывать визуальные проявления стендов</JJ_ShowStandVisuals>
 </LanguageData>
